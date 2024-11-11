@@ -1,4 +1,4 @@
-import os
+import os, sys
 import re
 import faker
 
@@ -16,4 +16,3 @@ schema = {
     "ICD-10 codes": {"generator": lambda: faker.Faker().random_element(elements=("S06.0X0A", "I10", "Z91.81")), "regex": r"^[A-Z][0-9].[0-9]{1}([A-Z])?$"},
     "CPT codes": {"generator": lambda: faker.Faker().random_element(elements=("99213", "77067", "36415-59")), "regex": r"^\d{5}(?:-\d{1,2})?$"}
 }
-
